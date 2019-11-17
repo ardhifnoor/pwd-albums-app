@@ -23,7 +23,7 @@ class Header extends Component {
     return(
       <View style={ headerStyle.viewStyle }>
         <Text style={ headerStyle.textStyle }>
-            Albums
+            { this.props.title }
         </Text>
       </View>
     )
