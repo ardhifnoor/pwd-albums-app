@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-const headerStyle = StyleSheet.create({
+const css = StyleSheet.create({
     viewStyle: {
         backgroundColor: '#F8F8F8',
         justifyContent: 'center',
@@ -21,8 +21,8 @@ const headerStyle = StyleSheet.create({
 class Header extends Component {
   render(){
     return(
-      <View style={ headerStyle.viewStyle }>
-        <Text style={ headerStyle.textStyle }>
+      <View style={ css.viewStyle }>
+        <Text style={ css.textStyle }>
             { this.props.title }
         </Text>
       </View>
