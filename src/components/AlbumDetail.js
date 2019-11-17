@@ -20,6 +20,10 @@ const css = StyleSheet.create({
     },
     headerTextStyle: {
         fontSize: 18
+    },
+    imageStyle: {
+        height: 300,
+        flex: 1
     }
 })
 
@@ -32,16 +36,27 @@ const AlbumDetail = ({ album }) => {
         url
     } = album
 
+    const {
+        headerContentStyle,
+        headerTextStyle,
+        thumbnailStyle,
+        thumbnailContainerStyle,
+        imageStyle
+    } = css
+
     return(
         <Card>
             <CardSection>
-                <View style={ css.thumbnailContainerStyle }>
-                    <Image style={ css.thumbnailStyle } source={{ uri: thumbnail_image }}/>
+                <View style={ thumbnailContainerStyle }>
+                    <Image style={ thumbnailStyle } source={{ uri: thumbnail_image }}/>
                 </View>
-                <View style={ css.headerContentStyle }>
-                    <Text style={ css.headerTextStyle }>{ title }</Text>
+                <View style={ headerContentStyle }>
+                    <Text style={ headerTextStyle }>{ title }</Text>
                     <Text>{ artist }</Text>
                 </View>
+            </CardSection>
+            <CardSection>
+                <Image style={ imageStyle } source={{ uri: image }}/>
             </CardSection>
         </Card>
     )
